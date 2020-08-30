@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="exercicios3.css" />
+</head>
+<body>
+    <header class="Exercícios3">
+        <ul class="listateste">
+            <li><a href="javaScript.html">Java Script</a></li>
+            <li><a href="2020course.html">2020 Course</a></li>
+            <li><a href="Twoscripts.html">Two Scripts</a></li>
+            <li><a href="Exercises.html">Exercises</a></li>
+            <li><a href="Exercícios1.html">Exercícios 1</a></li>
+            <li><a href="ExeciciosPart3.html">Exercícios 3</a></li>
+            <li><a href="Exercises4.html">Exercícios 4</a></li>
+            <li><a href="Finalexercise.html">Final exercise</a></li>
+
+
+        </ul>
+    </header>
+
+    <h2 class="title3">Exercício idade</h2>
+
+<section>
+    <div>
+        <p>
+            Qual ano de nascimento?
+            <input type="number" name="dadoidade" id="idadeuser"/> 
+        </p>    
+        <p>
+            Qual o sexo?
+            <input type="radio" name="sexouser" id="masc" checked/>
+            <label for="masc">Masculino</label>
+            <!--Para o radio buttom só poder escolher 1 deles, todas as opções do radio precisam ter o mesmo atributo "nome"-->
+            <input type="radio" name="sexouser" id="fem"/>
+            <label for="fem">Feminino</label>
+        </p>
+        <p>
+            <input type="button" id="calcule" name="verifique" value="Verifique os dados" onclick="checkProfile()" />
+        </p>
+    </div>
+    <div class="resultadofinal">
+        Aqui você verá o resultado
+    </div>
+
+</section>
+
+    <footer>
+        <p>Este é meu footer &copy; Ramon </p>
+    </footer>
+<script src="exercises3.js"></script>    
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2020 Course</title>
+    <link rel="stylesheet" href="javaediting.css"/>
+    <title>Document</title>
+</head>
+<body>
+    <header class="Javaheader">
+        <ul>
+            <li><a href="javaScript.html">Java Script</a></li>
+            <li><a href="2020course.html">2020 Course</a></li>
+            <li><a href="Twoscripts.html">Two Scripts</a></li>
+            <li><a href="Exercises.html">Exercises</a></li>
+            <li><a href="Exercícios1.html">Exercícios 1</a></li>
+            <li><a href="ExeciciosPart3.html">Exercícios 3</a></li>
+            <li><a href="Exercises4.html">Exercícios 4</a></li>
+            <li><a href="Finalexercise.html">Final exercise</a></li>
+
+
+        </ul>
+    </header> 
+<h1 class="titulo">Este exercício testa o DOM</h1>
+<p>Lorem, ipsum dolor sit amet <strong id="negrito">consectetur</strong> adipisicing elit. Labore, repellat iste obcaecati quasi vitae rerum in delectus minus quo tempora aperiam, voluptatem, quod soluta ipsum beatae voluptatibus distinctio porro! Ab!</p>
+
+<h1 class="outroTitulo">Testando classes</h1>
+<p class="segundopar">Lorem, ipsum dolor sit amet <strong id="maisumnegrito">consectetur</strong> adipisicing elit. Labore, repellat iste obcaecati quasi vitae rerum in delectus minus quo tempora aperiam, voluptatem, quod soluta ipsum beatae voluptatibus distinctio porro! Ab!</p>
+
+<script>
+    /*window.alert("Olá, mundo!");
+    window.confirm("Do you like JavaScript?");
+    var nome = window.prompt("What is your name?");
+    window.alert("Você é " + nome);*/
+    window.document.write("Olá, mundo! </br>"); /* escreve no documento HTML*/
+    window.document.write(window.document.charset);  /* tipo de caracteres usado no doc*/
+    window.document.write(window.navigator.appName); /* navegador sendo usado*/
+    window.document.write(window.document.URL); /* url da pagina*/
+
+    var teste1 = window.document.getElementsByTagName("h1")[0]; /*em colchetes escolhe qual tag pegar pela ordem (0,1,2,3...)*/
+    window.document.write(teste1.innerText); /*escreve o que a variavel teste1 recebeu no comando acima*/
+
+    var teste2 = window.document.getElementsByTagName("strong")[1]; /*em colchetes escolhe qual tag pegar pela ordem (0,1,2,3...)*/
+    teste2.style.color = "yellow"; /*aplica o style definido para a variavel teste2*/
+
+    var fundo = window.document.body; /*seleciona a tag criando uma variavel*/
+    fundo.style.background = "red"; /*aplica o estilo a ela*/
+
+    var alerta = window.document.getElementsByTagName("strong")[0];
+    window.alert(alerta.innerText);  /*mostra o texto do elemento em formato de alerta no browser*/
+
+    var testeClass = window.document.getElementsByClassName("outroTitulo")[0];  /*mesmo que só tenha um com aquela classe é necessário definir o indice*/
+    testeClass.style.background = "white";
+    testeClass.innerText = "alteração";
+    window.document.getElementById ("maisumnegrito").innerText = "Redefinindo texto";
+
+    var selector = window.document.querySelector ("p.segundopar"); /*se for ID seria p#segundopar */
+    selector.style.background = "green";
+
+
+</script>
+
+
+</body>
+</html>

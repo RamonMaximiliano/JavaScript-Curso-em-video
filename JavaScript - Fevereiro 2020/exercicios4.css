@@ -1,0 +1,56 @@
+body {
+    background-color: rgb(147, 149, 235);
+}
+
+.Exercícios3 li {
+    list-style: none;
+    display: inline;
+}
+
+.Exercícios3 a{
+    padding:5px;
+    background-color: rgb(148, 148, 231);
+    border-radius:5px;
+    color:white; 
+    text-decoration: none;
+    margin-bottom:0px;
+}
+
+.Exercícios3 {
+    background-color: rgb(69, 69, 252);
+    color:white;
+    padding-top:30px;
+    padding-bottom:1px;
+}
+
+.seção {
+    background: white;
+    margin: 20px auto 30px auto; 
+    width: 500px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.title {
+text-align: center;
+color:white;
+}
+
+.seção2 {
+    background:white;
+    width: 500px;
+    Padding: 10px;
+    Margin: 20px auto 20px auto;
+    border-radius: 10px;
+}
+
+.title2 {
+    color: white;
+    text-align: center;
+}
+
+.footerexe {
+    text-align:center;
+    color:white;
+
+}

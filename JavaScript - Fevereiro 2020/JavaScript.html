@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!--
+    curso em  video:
+    Operadores (Parte1) - Curso JavaScript #07
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Java Script</title>
+    <link rel="stylesheet" href="javaediting.css"/>
+<script>
+
+
+    /*Exemplo lampada*/
+    /* https://www.w3schools.com/js/tryit.asp?filename=tryjs_lightbulb */
+
+    function turnOn()
+    {      alert ("The light is on");
+        }
+
+    function turnOnB()
+    {   document.getElementById("light").src="/images/pic_bulbon.gif";
+            }
+
+    function turnOffB()
+    {   document.getElementById("light").src="/images/pic_bulboff.gif";
+            }
+    /*Exemplo lampada*/
+
+    /*
+    Tudo entre () = parâmetros
+    Tudo entre {} = códigos
+    
+    /*alert("Olá, mundo!");
+    window.alert("Hoje é " + Date());
+    alert("Hoje é " + Date());
+    document.write("Oi, hoje é "+ Date());*/
+    
+    //o prompt abaixo esta com number na frente para transforma de string para numeros   
+    
+    /*
+    var n1 = Number(window.prompt ("Digite um numero: "));
+    var n2 = Number(window.prompt ("Digite outro numero: "));
+    var s = n1 + n2; 
+    window.alert("A soma dos valores é " + s);
+    window.alert(`A soma dos valores é ${n1} + ${n2} = ${s}`);
+    document.getElementById("5").innerHTML = "Have a nice day!";
+    
+    var nome = window.prompt("Qual seu nome?");
+    document.write (`seu nome ${nome}, tem ${nome.length} letras <br>`);
+    document.write (`em maiusculo fica  ${nome.toUpperCase()}`);
+    
+    var nome = "casa";
+    nome.length
+    nome.toFixed(50)
+    nome.toUpperCase
+    nome.toLocaleLowerCase
+    document.write (nome , "<br/>"); 
+    document.write (nome.length);
+    */
+
+
+    </script>
+</head>
+<body>
+    <header class="Javaheader">
+        <ul>
+            <li><a href="javaScript.html">Java Script</a></li>
+            <li><a href="2020course.html">2020 Course</a></li>
+            <li><a href="Twoscripts.html">Two Scripts</a></li>
+            <li><a href="Exercises.html">Exercises</a></li>
+            <li><a href="Exercícios1.html">Exercícios 1</a></li>
+            <li><a href="ExeciciosPart3.html">Exercícios 3</a></li>
+            <li><a href="Exercises4.html">Exercícios 4</a></li>
+            <li><a href="Finalexercise.html">Final exercise</a></li>
+
+
+        </ul>
+    </header> 
+        
+        
+    <h1 class="titulo">
+        Olá mundo!
+    </h1>
+<p class="paragraph">
+Este documento testa os comandos JavaScript
+</p>
+<p id="5"></p>
+
+<h3>Turn the light on</h3>
+
+Luz1
+<img src="/images/pic_bulboff.gif" onclick="turnOn()"/>
+
+Luz2
+<img src="/images/pic_bulboff.gif" onmousemove="turnOn()"/>
+
+Luz3
+<img src="/images/pic_bulboff.gif" id="light" onclick="turnOnB()" ondblclick="turnOffB()"  />
+
+
+<script>
+
+var quebrada = false;    
+
+function mudaLampada(tipo) 
+{  
+    if (tipo==1) {var arquivo = "/images/pic_bulbon.gif";    }
+    if (tipo==2) { var arquivo = "/images/pic_bulboff.gif";  }
+    if (tipo==3) { var arquivo = "/images/pic_brokenbulb.png";}
+    
+    if (!quebrada) {
+     document.getElementById("luz").src = arquivo; 
+        if (tipo==3) {
+            quebrada = true;}
+        }
+}
+    
+</script>
+
+<h2>Acenda a lâmpada</h2>
+
+<img src="/images/pic_bulboff.gif" id="luz" onmousemove="mudaLampada(1)" onmouseout="mudaLampada(2)" onclick="mudaLampada(3)" />
+
+</body>
+</html>

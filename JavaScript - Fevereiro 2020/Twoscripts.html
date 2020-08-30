@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Two Scripts</title>
+    <link rel="stylesheet" href="javaediting.css"/>
+</head>
+<body>
+    <header class="Javaheader">
+        <ul>
+            <li><a href="javaScript.html">Java Script</a></li>
+            <li><a href="2020course.html">2020 Course</a></li>
+            <li><a href="Twoscripts.html">Two Scripts</a></li>
+            <li><a href="Exercises.html">Exercises</a></li>
+            <li><a href="Exercícios1.html">Exercícios 1</a></li>
+            <li><a href="ExeciciosPart3.html">Exercícios 3</a></li>
+            <li><a href="Exercises4.html">Exercícios 4</a></li>
+            <li><a href="Finalexercise.html">Final exercise</a></li>
+
+
+        </ul>
+    </header> 
+
+<div id="quadrado">
+    Change this!!!
+</div>    
+
+<div>
+    <h2>Simple calculator</h2>
+    <input type="number" name="firstspace" id="firstspace"></br>
+    <input type="number" name="secondspace" id="secondspace"></br>
+    <input type="button" value="Do the math" onclick="sumdude()"> 
+    <p class="result">Result:</p>
+</div>
+
+<h2>System to test IF / Para mudar ponha mais que 10</h2>
+Car speed:<input type="number" name="txtvel" id="txtvel">
+<input type="button"  value="check" onclick="calcule()">
+</br>
+</br>
+<div id="iftest">
+</div>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+<script>
+
+    /*primeiro teste IF*/
+    function calcule(){
+        var novotxt = window.document.querySelector("input#txtvel");
+        var newresult = window.document.querySelector("div#iftest");
+        var valuefinal = Number (novotxt.value);
+        newresult.innerHTML = `Escreva o valor ${valuefinal} aqui</br>`;
+        if (valuefinal>10) {
+            newresult.innerHTML += `Uma frase a mais!</br>`;
+        }
+        else
+            {newresult.innerHTML += `O numero é pequeno</br>`;
+            };
+        newresult.innerHTML += `Assim ficou seu resultado!`;
+    };
+    /*primeiro teste IF*/
+
+   
+    /*Testes da caixa*/
+    var caixa = window.document.getElementById("quadrado");
+    caixa.addEventListener("click", Click);
+    caixa.addEventListener("mouseenter", Enter);
+    caixa.addEventListener("mouseout", Exit);
+
+    function Click (){
+        caixa.innerText = "You clicked!";
+        caixa.style.background = "red";
+         }
+
+    function Enter (){
+        caixa.innerText = "You entered!";
+        caixa.style.background = "pink";
+    }
+
+    function Exit (){
+        caixa.innerText = "You left!";
+        caixa.style.background = "yellow";
+    }
+    /*Testes da caixa*/
+
+    function sumdude (){
+        var number1 = window.document.getElementById("firstspace");
+        var number2 = window.document.querySelector("input#secondspace");
+        var res = window.document.getElementsByClassName("result")[0];
+        var n1 = parseInt(number1.value);
+        var n2 = parseInt(number2.value);
+        var resultado = n1 + n2;
+        res.innerHTML = `A soma entre ${n1} e ${n2} é igual a <strong>${resultado}</strong>`; 
+    }
+
+</script>
+</body>
+</html>

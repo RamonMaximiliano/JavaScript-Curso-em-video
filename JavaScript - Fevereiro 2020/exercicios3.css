@@ -1,0 +1,48 @@
+.Exercícios3 li {
+    list-style: none;
+    display: inline;
+}
+
+.Exercícios3 a{
+    padding:5px;
+    background-color: rgb(148, 148, 231);
+    border-radius:5px;
+    color:white; 
+    text-decoration: none;
+    margin-bottom:0px;
+}
+
+.Exercícios3 {
+    background-color: rgb(69, 69, 252);
+    color:white;
+    padding-top:30px;
+    padding-bottom:1px;
+}
+
+
+section {
+    background:white;
+    margin:auto;
+    width:500px;
+    padding: 15px;
+    border-radius:10px;
+
+}
+
+body {
+    background: rgb(152, 152, 228);
+
+
+
+}
+
+.title3 {
+    color:white;
+    text-align:center;
+}
+
+footer {
+    text-align: center;
+
+}
+

@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+body {background-image:  url("images/JavaScriptbackground.jpg");
+    background-repeat: no-repeat;
+    font-size: 20px;
+    background-size:100%;
+    margin-left: 20px;
+}   
+    
+.titulo {
+    color: rgb(44, 204, 52);
+}
+
+.paragraph {
+    color:black;
+}
+
+.Javaheader li {
+    list-style: none;
+    display: inline;
+}
+
+.Javaheader a{
+    padding:5px;
+    background-color: rgb(148, 148, 231);
+    border-radius:5px;
+    color:white; 
+    text-decoration: none;
+    margin-bottom:0px;
+}
+
+.Javaheader {
+    background-color: rgb(69, 69, 252);
+    color:white;
+    padding-top:30px;
+    padding-bottom:1px;
+}
+
+#quadrado {
+    background-color: rgb(142, 236, 142);
+    text-align:center;
+    font-size:25px;
+    font-weight: bold;
+    width: 200px;
+    height:200px;
+    line-height: 200px;
+    margin:20px;
+}
+
+

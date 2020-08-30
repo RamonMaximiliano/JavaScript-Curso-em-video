@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercises</title>
+    <link rel="stylesheet" href="javaediting.css" />
+</head>
+
+<body>
+    <header class="Javaheader">
+        <ul>
+            <li><a href="javaScript.html">Java Script</a></li>
+            <li><a href="2020course.html">2020 Course</a></li>
+            <li><a href="Twoscripts.html">Two Scripts</a></li>
+            <li><a href="Exercises.html">Exercises</a></li>
+            <li><a href="Exercícios1.html">Exercícios 1</a></li>
+            <li><a href="ExeciciosPart3.html">Exercícios 3</a></li>
+            <li><a href="Exercises4.html">Exercícios 4</a></li>
+            <li><a href="Finalexercise.html">Final exercise</a></li>
+
+
+        </ul>
+    </header>
+    </br>
+    </br>
+    <h3>Função imprimir</h3>
+    <input type="number" value="Adicione um número" id="newnumber">
+    <input type="button" value="Envie o número" id="newnumber" onclick="duploteste()">
+    </br>
+    </br>
+    <div id="testesfolha">
+    </div>
+    </br>
+    </br>
+    <hr>
+    <h3>Função IF simples</h3>
+    <input type="number" value="Adicione um número" id="numberif1">
+    <input type="button" value="Envie o número" id="numberif" onclick="testeif()">
+    </br>
+    </br>
+    <div id="resultif">
+    </div>
+    </br>
+    </br>
+    <hr>
+    <h3>Função IF aninhada</h3>
+    <input type="number" value="Adicione um número" id="aninhadaif">
+    <input type="button" value="Envie o número" id="aninhadaclick" onclick="testeaninhado()">
+    </br>
+    </br>
+    <div id="aninhadoresult">
+    </div>
+    </br>
+    </br>
+    <hr>
+    <h3>Função Switch</h3>
+    <p>De uma nota de 1 a 5 para estes exercícios</p>
+    <input type="number" value="Adicione um número" id="switchtest">
+    <input type="button" value="Envie o número" id="switchtest" onclick="switchtest()">
+    </br>
+    </br>
+    <div id="switchtresult">
+    </div>
+    </br>
+    </br>
+    <hr>
+    <h3>Operador ternário</h3>
+    <input type="number" value="Qualaidade" id="idadeinserida">
+    <input type="button" value="Result" id="chamafuncao" onclick="qualidade()">
+    </br>
+    </br>
+    <div id="idadedoaluno">
+    </div>
+    </br>
+    </br>
+    <hr>
+    <h3>Função qual hora do sistema?</h3>
+    <input type="button" value="Qualahora" id="horaedia" onclick="timeanddate()">
+    </br>
+    </br>
+    <div id="dataehora">
+    </div>
+    <hr>
+    <!-- Para formatar o HTML apertar="shift + Alt + F"  -->
+    <script>
+        function switchtest() {
+            var switchtesting = window.document.getElementById("switchtest");
+            var switchresultado = window.document.getElementById("switchtresult");
+            var switchfinal = Number(switchtesting.value);
+
+            switch (switchfinal) {
+                case 0:
+                    switchresultado.innerHTML = (`Você não deu uma nota válida!`)
+                    break
+
+                case 1:
+                    switchresultado.innerHTML = (`Você deu nota Ruim!`)
+                    break
+
+                case 2:
+                    switchresultado.innerHTML = (`Você deu nota Média!`)
+                    break
+
+                case 3:
+                    switchresultado.innerHTML = (`Você deu nota Boa!`)
+                    break
+
+                case 4:
+                    switchresultado.innerHTML = (`Você deu nota Ótima!`)
+                    break
+
+                case 5:
+                    switchresultado.innerHTML = (`Você deu nota Excellente!`)
+                    break
+
+                default:
+                    switchresultado.innerHTML = (`Você não deu uma nota válida!`)
+                    break
+            }
+
+        }
+
+        function testeaninhado() {
+            var aninhado1 = window.document.getElementById("aninhadaif")
+            var aninhado = window.document.querySelector("div#aninhadoresult")
+            var aninhadoFinal = Number(aninhado1.value)
+            if (aninhadoFinal <= 12) {
+                aninhado.innerHTML = (`Criança`)
+            }
+            else
+                if (aninhadoFinal > 12 && aninhadoFinal < 18) {
+                    aninhado.innerHTML = (`Adolescente`)
+                } else {
+                    aninhado.innerHTML = (`Adulto`)
+                }
+        }
+
+
+        function testeif() {
+            var numeroif = window.document.getElementById("numberif1");
+            var testouif = window.document.getElementById("resultif");
+            var numeroif2 = Number(numeroif.value);
+            if (numeroif2 > 18) {
+                testouif.innerHTML = (`Ele é <em>maior</em> de idade pois tem ${numeroif2}`)
+            }
+            else {
+                testouif.innerHTML = (`Ele é <u>menor</u> de idade pois tem ${numeroif2}`)
+            }
+        };
+
+        function duploteste() {
+            var numerocolocado = window.document.getElementById("newnumber");
+            var variavelinterna = window.document.querySelector("div#testesfolha");
+            var valuefinal2 = Number(numerocolocado.value);
+            variavelinterna.innerHTML = (`Este é seu numero: ${valuefinal2}`)
+        }
+
+        function timeanddate() {
+            var now = new Date()
+            var hora = now.getHours()
+            var diasemana = new Date()
+            var diasem = diasemana.getDay()
+            var datafinal = window.document.getElementById("dataehora");
+            datafinal.innerHTML = (`A hora é: ${hora} e o dia é ${diasem} da semana`)
+        }
+
+        function qualidade() {
+            var numeroaluno = window.document.getElementById("idadeinserida"); 
+            var resultadoidade = window.document.querySelector("div#idadedoaluno");
+            var numeroaluno2 = Number(numeroaluno.value);
+            let operadorternario = numeroaluno2 >=18? "Ele é de maior":"Ele é de menor";
+            resultadoidade.innerHTML = (`O fato é que: ${operadorternario}`);
+        }
+</script>
+</body>
+
+</html>
